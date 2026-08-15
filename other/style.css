@@ -1,0 +1,100 @@
+/* Reproduction of the Apache directory index shown in the reference image */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  color: #000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  padding: 8px;
+}
+
+h1 {
+  font-size: 34px;
+  margin: 16px 0 26px 0;
+  font-weight: bold;
+}
+
+.index {
+  border-collapse: collapse;
+  margin-left: 2px;
+  min-width: 450px;
+}
+
+.index th,
+.index td {
+  padding: 0 8px 8px 0;
+  text-align: left;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.index th {
+  font-weight: bold;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 14px;
+}
+
+.index th.name {
+  padding-left: 100px;
+}
+
+.index tbody tr:first-child td {
+  padding-top: 12px;
+}
+
+.index tbody td:first-child {
+  min-width: 190px;
+}
+
+a {
+  color: #00e;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #551a8b;
+}
+
+a:hover {
+  color: #00e;
+}
+
+.folder::before {
+  content: "📁";
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.file::before {
+  content: "📄";
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.parent::before {
+  content: "↩";
+  display: inline-block;
+  color: #000;
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+address {
+  margin-top: 14px;
+  padding-top: 16px;
+  border-top: 1px solid #aaa;
+  width: 450px;
+  font-style: italic;
+}
